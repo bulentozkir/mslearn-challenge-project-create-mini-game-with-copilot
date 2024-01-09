@@ -1,5 +1,8 @@
 # Rock Paper Scissors minigame developed using GitHub Codespaces and Copilot
 # by: Bulent Ozkir (CSA @ Microsoft) 
+# Tested on Python 3.8.10 64-bit
+# Last updated: 8/12/2021
+# run it with: python app.py
 
 #define a function that takes no arguments
 def input_user():
