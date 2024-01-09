@@ -1,8 +1,12 @@
+# Rock Paper Scissors minigame developed using GitHub Codespaces and Copilot
+# by: Bulent Ozkir (CSA @ Microsoft) 
+
 #define a function that takes no arguments
 def input_user():
     # get input from the user with rock, paper, scissors
     user_choice = input('Rock (R), Paper(P), or Scissors(S)?')
     # respond to the user's choice
+    user_choice = user_choice.upper()
     if user_choice == 'R':
         print('User: Rock')
         user_choice = 'R'
@@ -113,7 +117,7 @@ while True:
     print('Ties: ' + str(tie_count))
 
     # ask user if they want to play again
-    play_again = input('Play again? (Y/N)')
+    play_again = input('Play again? (Y/N)').upper()
     # if user says no, break out of loop
     if play_again == 'N':
         break
