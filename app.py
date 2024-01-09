@@ -23,6 +23,30 @@ def input_user():
     # return the user's choice
     return user_choice
 
+# get computer choice randomly and return it
+def get_computer():
+    # get random choice for computer as R, P, or S
+    from random import randint
+    rand_num = randint(0,2)
+    if rand_num == 0:
+        computer_choice = 'R'
+    elif rand_num == 1:
+        computer_choice = 'P'
+    else:
+        computer_choice = 'S'
+
+    if computer_choice == 'R':
+        print('Computer: Rock')
+    elif computer_choice== 'P':
+        print('Computer: Paper')
+    elif computer_choice == 'S':
+        print('Computer: Scissors')
+    else:
+        print('Computer: Invalid choice')
+    
+    # return computer choice
+    return computer_choice
+
 # define get_winner function that takes 2 arguments: player1 & player2
 def get_winner(player1, player2):
     # if player1 is the same as player2, it's a tie
@@ -56,29 +80,6 @@ def get_winner(player1, player2):
         elif player2 == 'R':
             return 2
         
-def get_computer():
-    # get random choice for computer as R, P, or S
-    from random import randint
-    rand_num = randint(0,2)
-    if rand_num == 0:
-        computer_choice = 'R'
-    elif rand_num == 1:
-        computer_choice = 'P'
-    else:
-        computer_choice = 'S'
-
-    if computer_choice == 'R':
-        print('Computer: Rock')
-    elif computer_choice== 'P':
-        print('Computer: Paper')
-    elif computer_choice == 'S':
-        print('Computer: Scissors')
-    else:
-        print('Computer: Invalid choice')
-    
-    # return computer choice
-    return computer_choice
-
 
 # define a variable to keep track of the number of games
 game_count = 0
@@ -92,7 +93,8 @@ computer_choice = ''
 while True:
     game_count += 1
     print('Game: ' + str(game_count))
-    # get user input
+
+    # get valid user input
     while user_choice not in ['R', 'P', 'S']:
         user_choice = input_user()
     # get computer input
