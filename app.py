@@ -1,8 +1,47 @@
 # Rock Paper Scissors minigame developed using GitHub Codespaces and Copilot
 # by: Bulent Ozkir (CSA @ Microsoft) 
-# Tested on Python 3.8.10 64-bit
-# Last updated: 8/12/2021
+# Tested on Python 3.11.7 64-bit
+# Last updated: 10/01/2024 (DD/MM/YYYY)
 # run it with: python app.py
+
+#print Rock, Paper, Scissors in graphic form
+def print_rps(choice):
+    #if choice is rock
+    if choice == 'R':
+        print('Rock')
+        #print "ROCK" in infographic form
+        print("""
+            _______
+        ---'   ____)
+                (_____)
+                (_____)
+                (____)
+        ---.__(___)
+        """)
+    #if choice is paper
+    elif choice == 'P':
+        print('Paper')
+        #print paper in graphic form
+        print("""
+            _______
+        ---'    ____)____
+                    ______)
+                    _______)
+                    _______)
+        ---.__________)
+        """)
+    #if choice is scissors
+    elif choice == 'S':
+        print('Scissors')
+        #print scissors in graphic form
+        print("""
+            _______
+        ---'   ____)____
+                    ______)
+                __________)
+                (____)
+        ---.__(___)
+        """)
 
 #define a function that takes no arguments
 def input_user():
@@ -12,12 +51,17 @@ def input_user():
     user_choice = user_choice.upper()
     if user_choice == 'R':
         print('User: Rock')
+        #print "ROCK" in infographic form
+        print_rps('R')
         user_choice = 'R'
     elif user_choice == 'P':
         print('User: Paper')
+        #print paper in graphic form
+        print_rps('P')
         user_choice = 'P'
     elif user_choice == 'S':
         print('User: Scissors')
+        print_rps('S')
         user_choice = 'S'
     else:
         print('User: Invalid choice')
@@ -40,10 +84,13 @@ def get_computer():
 
     if computer_choice == 'R':
         print('Computer: Rock')
+        print_rps('R')
     elif computer_choice== 'P':
         print('Computer: Paper')
+        print_rps('P')
     elif computer_choice == 'S':
         print('Computer: Scissors')
+        print_rps('S')
     else:
         print('Computer: Invalid choice')
     
