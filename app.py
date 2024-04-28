@@ -4,6 +4,7 @@
 # Last updated: 10/01/2024 (DD/MM/YYYY)
 # run it with: python app.py
 
+#demo game of rock, paper, scissors
 #print Rock, Paper, Scissors in graphic form
 def print_rps(choice):
     #if choice is rock
